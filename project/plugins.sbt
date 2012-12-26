@@ -1,3 +1,7 @@
+resolvers += "gseitz@github" at "http://gseitz.github.com/maven/"
+
+addSbtPlugin("com.github.gseitz" % "sbt-protobuf" % "0.2.2")
+
 resolvers += "Local" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
 
-addSbtPlugin("com.twitter" %% "sbt11-scrooge" % "3.0.1-SNAPSHOT")
+

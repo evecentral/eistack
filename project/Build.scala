@@ -3,9 +3,9 @@ import Keys._
 
 object Build extends sbt.Build {
     lazy val root = Project(id = "eistack",
-                            base = file(".")) aggregate(eithrift)
+                            base = file(".")) aggregate(eiprotobuf)
 
-    lazy val eithrift = Project(id = "eithrift",
-                           base = file("eithrift"))
+    lazy val eiprotobuf = Project(id = "eiprotobuf",
+                           base = file("eiprotobuf"))
 
 }

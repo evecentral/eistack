@@ -1,0 +1,69 @@
+message Killmail {
+    optional uint64 ccpId = 1;
+    required uint64 solarSystemId = 2;
+    required uint64 killTime = 3;
+    optional uint64 moonId = 4;
+    required bytes hash = 5;
+
+    message Participant {
+        optional uint64 characterId = 1;
+        optional string characterName = 2;
+        optional uint64 corporationId = 3;
+        optional string corporationName = 4;
+        optional uint64 allianceId = 5;
+        optional uint64 shipTypeId = 6;
+        optional uint64 factionId = 7;
+        optional string factionName = 8;
+        optional int32 damageTaken = 9;
+        optional double securityStatus = 10;
+        optional bool finalBlow = 11;
+        optional uint64 weaponTypeId = 12;
+    }
+
+    required Participant victim = 6;
+    repeated Participant attackers = 7;
+
+    enum PricingSource {
+        EVECENTRAL = 1;
+        MANUAL = 2;
+    }
+
+    message PricingLookup {
+        required double price = 1;
+        required uint64 pricedAt = 2;
+        optional PricingSource source = 3;
+        optional uint64 regionId = 4;
+        optional uint64 solarSystemId = 5;
+    }
+
+    message Loot {
+        required uint64 typeId = 1;
+        required uint32 flag = 2;
+        required uint32 qtyDropped = 3;
+        required uint32 qtyDestroyed = 4;
+        repeated Loot containedLoot = 5;
+        repeated PricingLookup pricing = 6;
+    }
+
+    repeated Loot loot = 8;
+
+    enum BoardType {
+        EDK = 1;
+        ZKB = 2;
+        CUSTOM = 3;
+    }
+
+    message KillSource {
+        required bool directApi = 1;
+        optional BoardType boardType = 2;
+        optional string boardUrl = 3;
+        optional uint64 edkInternalKillId = 4;
+        optional int32 levelsOfIndirection = 5;
+        required int32 tombstone = 6;
+    }
+
+    repeated KillSource sources = 9;
+    required int32 tombstone = 10;
+    repeated PricingLookup price = 11;
+
+}
