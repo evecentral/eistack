@@ -1,5 +1,6 @@
 package com.eveintel.killmail
 
+import scala.collection.JavaConversions._
 import org.joda.time.DateTime
 import com.eveintel.protobuf.Eistack
 import com.google.protobuf.ByteString
@@ -59,7 +60,7 @@ case class Killmail(ccpId: Long, solarSystemId: Long,
                     tombstone: Int,
                     price: Seq[PricingLookup])
 
-object KillmailConverters {
+object KillmailImplicitConverters {
 
   /**
    * Reduce matching to make using protobuf builders easier
@@ -71,6 +72,58 @@ object KillmailConverters {
   }
 
   implicit def optionToSideeffect[T](o: Option[T]) = new SideeffectOption[T](o)
+
+  implicit def fromProtoToPrice(pl: Eistack.Killmail.PricingLookup): PricingLookup = {
+    PricingLookup(pl.getPrice, new DateTime(pl.getPricedAt),
+      pl.hasSource match { case true => Some(PricingSource(pl.getSource.getNumber)) case false => None },
+      pl.hasRegionId match { case true => Some(pl.getRegionId) case false => None },
+      pl.hasSolarSystemId match { case true => Some(pl.getSolarSystemId) case false => None} )
+  }
+
+  implicit def fromProtoToSource(s: Eistack.Killmail.KillSource): KillSource = {
+    KillSource(s.getDirectApi,
+    s.hasBoardType match { case true => Some(BoardType(s.getBoardType.getNumber)) case false => None },
+    s.hasBoardUrl match { case true => Some(s.getBoardUrl) case false => None },
+    s.hasEdkInternalKillId match { case true => Some(s.getEdkInternalKillId) case false => None },
+    s.getLevelsOfIndirection, s.getTombstone)
+  }
+
+  implicit def fromProtoToParticipant(p: Eistack.Killmail.Participant): Participant = {
+    Participant(p.hasCharacterId match { case true => Some(p.getCharacterId) case false => None },
+    p.hasCharacterName match { case true => Some(p.getCharacterName) case false => None },
+    p.hasCorporationId match { case true => Some(p.getCorporationId) case false => None },
+    p.hasCorporationName match { case true => Some(p.getCorporationName) case false => None },
+    p.hasAllianceId match { case true => Some(p.getAllianceId) case false => None },
+    p.hasAllianceName match { case true => Some(p.getAllianceName) case false => None },
+    p.hasShipTypeId match { case true => Some(p.getShipTypeId) case false => None },
+    p.hasFactionId match { case true => Some(p.getFactionId) case false => None },
+    p.hasFactionName match { case true => Some(p.getFactionName) case false => None },
+    p.hasDamageTaken match { case true => Some(p.getDamageTaken) case false => None },
+    p.hasSecurityStatus match { case true => Some(p.getSecurityStatus) case false => None },
+    p.hasFinalBlow match { case true => Some(p.getFinalBlow) case false => None },
+    p.hasWeaponTypeId match { case true => Some(p.getWeaponTypeId) case false => None }
+    )
+  }
+
+  implicit def fromProtoToLoot(l: Eistack.Killmail.Loot): Loot = {
+    Loot(l.getTypeId, l.getFlag, l.getQtyDropped, l.getQtyDestroyed,
+      l.getContainedLootList.toSeq.map(t => fromProtoToLoot(t)),
+      l.getPricingList.toSeq.map(t => fromProtoToPrice(t)))
+  }
+
+  implicit def fromProtoToKillmail(message: Eistack.Killmail) : Killmail = {
+    Killmail(message.getCcpId,
+      message.getSolarSystemId,
+      new DateTime(message.getKillTime),
+      message.hasMoonId match { case true => Some(message.getMoonId) case false => None },
+      message.getHash.toByteArray.toSeq,
+      message.getVictim,
+      message.getAttackersList.toSeq.map { p => fromProtoToParticipant(p) },
+      message.getLootList.toSeq.map { l => fromProtoToLoot(l)},
+      message.getSourcesList.toSeq.map { s => fromProtoToSource(s) },
+      message.getTombstone,
+      message.getPriceList.toSeq.map { p => fromProtoToPrice(p) })
+  }
 
   implicit def toProtoPricingLookup(pl: PricingLookup) = {
     val plb = Eistack.Killmail.PricingLookup.newBuilder()
