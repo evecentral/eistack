@@ -2,6 +2,8 @@ import sbtprotobuf.{ProtobufPlugin=>PB}
 
 seq(PB.protobufSettings: _*)
 
+organization  := "com.eveintel"
+
 name := "eiprotobuf"
 
 version := "1.0.0-SNAPSHOT"

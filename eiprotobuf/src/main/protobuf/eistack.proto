@@ -1,3 +1,7 @@
+package eistack;
+
+option java_package = "com.eveintel.protobuf";
+
 message Killmail {
     optional uint64 ccpId = 1;
     required uint64 solarSystemId = 2;
@@ -11,13 +15,14 @@ message Killmail {
         optional uint64 corporationId = 3;
         optional string corporationName = 4;
         optional uint64 allianceId = 5;
-        optional uint64 shipTypeId = 6;
-        optional uint64 factionId = 7;
-        optional string factionName = 8;
-        optional int32 damageTaken = 9;
-        optional double securityStatus = 10;
-        optional bool finalBlow = 11;
-        optional uint64 weaponTypeId = 12;
+        optional string allianceName = 6;
+        optional uint64 shipTypeId = 7;
+        optional uint64 factionId = 8;
+        optional string factionName = 9;
+        optional int32 damageTaken = 10;
+        optional double securityStatus = 11;
+        optional bool finalBlow = 12;
+        optional uint64 weaponTypeId = 13;
     }
 
     required Participant victim = 6;
@@ -58,7 +63,7 @@ message Killmail {
         optional BoardType boardType = 2;
         optional string boardUrl = 3;
         optional uint64 edkInternalKillId = 4;
-        optional int32 levelsOfIndirection = 5;
+        required int32 levelsOfIndirection = 5;
         required int32 tombstone = 6;
     }
 
