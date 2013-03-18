@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eveapi version="2" edkapi="1.03">
+    <currentTime>2013-03-18 20:21:22</currentTime>
+    <result>
+        <rowset name="kills" key="killID" columns="killID,solarSystemID,killTime,moonID,hash,trust">
+            <row killID="28889152" killInternalID="16605529" solarSystemID="31002020" killTime="2013-03-01 20:48:00"
+                 moonID="0" hash="59965efd4e51393fd51043d8dd0cbacf" trust="0">
+                <victim characterID="119433417" characterName="ghertrude" corporationID="98047280"
+                        corporationName="Hobos with a Railgun" allianceID="958929439" allianceName="None" factionID="0"
+                        factionName="" damageTaken="4510313" shipTypeID="23757"/>
+                <rowset name="attackers"
+                        columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="216289825" characterName="Orthrus" corporationID="146033117"
+                         corporationName="Unknown" allianceID="958929439" allianceName="None" factionID="0"
+                         factionName="" securityStatus="0.0" damageDone="4074869" finalBlow="0" weaponTypeID="30462"
+                         shipTypeID="0"/>
+                    <row characterID="278704222" characterName="HicksNT" corporationID="98051844"
+                         corporationName="Syndicate of Death" allianceID="99001730" allianceName="BLOOD UNION"
+                         factionID="0" factionName="" securityStatus="0.5" damageDone="291024" finalBlow="0"
+                         weaponTypeID="19724" shipTypeID="19724"/>
+                    <row characterID="769127567" characterName="MUCTEP POMA" corporationID="98073708"
+                         corporationName="Synergy Group" allianceID="99001730" allianceName="BLOOD UNION" factionID="0"
+                         factionName="" securityStatus="0.6" damageDone="122305" finalBlow="1" weaponTypeID="3546"
+                         shipTypeID="19724"/>
+                    <row characterID="487451533" characterName="KOHTEP" corporationID="1943719519"
+                         corporationName="Jedi Knight's Orden" allianceID="99002427" allianceName="Jedi Path"
+                         factionID="0" factionName="" securityStatus="-4.5" damageDone="14900" finalBlow="0"
+                         weaponTypeID="29988" shipTypeID="29988"/>
+                    <row characterID="807975465" characterName="FoontEG" corporationID="98051844"
+                         corporationName="Syndicate of Death" allianceID="99001730" allianceName="BLOOD UNION"
+                         factionID="0" factionName="" securityStatus="3.6" damageDone="7215" finalBlow="0"
+                         weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="963748051" characterName="Flakon" corporationID="1943719519"
+                         corporationName="Jedi Knight's Orden" allianceID="99002427" allianceName="Jedi Path"
+                         factionID="0" factionName="" securityStatus="3.4" damageDone="0" finalBlow="0"
+                         weaponTypeID="14248" shipTypeID="0"/>
+                    <row characterID="90006350" characterName="GoonXXX" corporationID="98051844"
+                         corporationName="Syndicate of Death" allianceID="99001730" allianceName="BLOOD UNION"
+                         factionID="0" factionName="" securityStatus="3.5" damageDone="0" finalBlow="0"
+                         weaponTypeID="28654" shipTypeID="12017"/>
+                    <row characterID="1901488050" characterName="KAPDAH" corporationID="98051844"
+                         corporationName="Syndicate of Death" allianceID="99001730" allianceName="BLOOD UNION"
+                         factionID="0" factionName="" securityStatus="3.4" damageDone="0" finalBlow="0"
+                         weaponTypeID="14260" shipTypeID="29984"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+                    <row typeID="448" flag="0" qtyDropped="0" qtyDestroyed="2"/>
+                    <row typeID="527" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="2032" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="2032" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="2032" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="2048" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="2478" flag="87" qtyDropped="0" qtyDestroyed="5"/>
+                    <row typeID="3244" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="3534" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="6005" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="11219" flag="0" qtyDropped="0" qtyDestroyed="2"/>
+                    <row typeID="11249" flag="0" qtyDropped="0" qtyDestroyed="2"/>
+                    <row typeID="11259" flag="0" qtyDropped="0" qtyDestroyed="2"/>
+                    <row typeID="11321" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="11644" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="11648" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="11987" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="12219" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="14144" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="16275" flag="0" qtyDropped="0" qtyDestroyed="300"/>
+                    <row typeID="16275" flag="0" qtyDropped="0" qtyDestroyed="750"/>
+                    <row typeID="16357" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="16455" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="16455" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="16455" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="16455" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="16455" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="16487" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="18708" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="18708" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="20218" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="21640" flag="87" qtyDropped="0" qtyDestroyed="5"/>
+                    <row typeID="22572" flag="87" qtyDropped="0" qtyDestroyed="20"/>
+                    <row typeID="23059" flag="87" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="23061" flag="87" qtyDropped="0" qtyDestroyed="8"/>
+                    <row typeID="23473" flag="87" qtyDropped="0" qtyDestroyed="4"/>
+                    <row typeID="23525" flag="87" qtyDropped="0" qtyDestroyed="6"/>
+                    <row typeID="23536" flag="87" qtyDropped="0" qtyDestroyed="3"/>
+                    <row typeID="23717" flag="87" qtyDropped="0" qtyDestroyed="30"/>
+                    <row typeID="23729" flag="87" qtyDropped="0" qtyDestroyed="14"/>
+                    <row typeID="24569" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="25954" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="26374" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="26374" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="31055" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="31366" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="526" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="527" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="2032" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="2048" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="3244" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="3534" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="4031" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="5945" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="5955" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="14144" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="14144" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="17938" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="24569" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="24569" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="27951" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="9678" flag="0" qtyDropped="2" qtyDestroyed="0"/>
+                    <row typeID="11229" flag="0" qtyDropped="2" qtyDestroyed="0"/>
+                    <row typeID="23061" flag="87" qtyDropped="2" qtyDestroyed="0"/>
+                    <row typeID="23729" flag="87" qtyDropped="2" qtyDestroyed="0"/>
+                    <row typeID="23536" flag="87" qtyDropped="5" qtyDestroyed="0"/>
+                    <row typeID="30488" flag="0" qtyDropped="7" qtyDestroyed="0"/>
+                    <row typeID="23473" flag="87" qtyDropped="13" qtyDestroyed="0"/>
+                    <row typeID="23525" flag="87" qtyDropped="14" qtyDestroyed="0"/>
+                    <row typeID="22765" flag="87" qtyDropped="30" qtyDestroyed="0"/>
+                    <row typeID="23523" flag="87" qtyDropped="30" qtyDestroyed="0"/>
+                    <row typeID="23705" flag="87" qtyDropped="30" qtyDestroyed="0"/>
+                    <row typeID="23709" flag="87" qtyDropped="30" qtyDestroyed="0"/>
+                    <row typeID="21640" flag="87" qtyDropped="36" qtyDestroyed="0"/>
+                    <row typeID="2478" flag="87" qtyDropped="44" qtyDestroyed="0"/>
+                    <row typeID="2488" flag="87" qtyDropped="45" qtyDestroyed="0"/>
+                    <row typeID="16275" flag="0" qtyDropped="1903" qtyDestroyed="0"/>
+                </rowset>
+            </row>
+            <row killID="28889124" killInternalID="16605530" solarSystemID="31002020" killTime="2013-03-01 20:47:00"
+                 moonID="0" hash="082484563d98726c1a6da033e363e8f1" trust="0">
+                <victim characterID="91357800" characterName="Flonje" corporationID="98047280"
+                        corporationName="Hobos with a Railgun" allianceID="958929439" allianceName="None" factionID="0"
+                        factionName="" damageTaken="1326132" shipTypeID="19720"/>
+                <rowset name="attackers"
+                        columns="characterID,characterName,corporationID,corporationName,allianceID,allianceName,factionID,factionName,securityStatus,damageDone,finalBlow,weaponTypeID,shipTypeID">
+                    <row characterID="30430" characterName="Oneiric Missile" corporationID="146033117"
+                         corporationName="Unknown" allianceID="958929439" allianceName="None" factionID="0"
+                         factionName="" securityStatus="0.0" damageDone="479517" finalBlow="0" weaponTypeID="30430"
+                         shipTypeID="0"/>
+                    <row characterID="769127567" characterName="MUCTEP POMA" corporationID="98073708"
+                         corporationName="Synergy Group" allianceID="99001730" allianceName="BLOOD UNION" factionID="0"
+                         factionName="" securityStatus="0.6" damageDone="468036" finalBlow="1" weaponTypeID="3546"
+                         shipTypeID="19724"/>
+                    <row characterID="278704222" characterName="HicksNT" corporationID="98051844"
+                         corporationName="Syndicate of Death" allianceID="99001730" allianceName="BLOOD UNION"
+                         factionID="0" factionName="" securityStatus="0.5" damageDone="352964" finalBlow="0"
+                         weaponTypeID="19724" shipTypeID="19724"/>
+                    <row characterID="807975465" characterName="FoontEG" corporationID="98051844"
+                         corporationName="Syndicate of Death" allianceID="99001730" allianceName="BLOOD UNION"
+                         factionID="0" factionName="" securityStatus="3.6" damageDone="25202" finalBlow="0"
+                         weaponTypeID="29990" shipTypeID="29990"/>
+                    <row characterID="245166448" characterName="MAXX0071" corporationID="98073708"
+                         corporationName="Synergy Group" allianceID="99001730" allianceName="BLOOD UNION" factionID="0"
+                         factionName="" securityStatus="5.0" damageDone="384" finalBlow="0" weaponTypeID="2629"
+                         shipTypeID="29984"/>
+                    <row characterID="90006350" characterName="GoonXXX" corporationID="98051844"
+                         corporationName="Syndicate of Death" allianceID="99001730" allianceName="BLOOD UNION"
+                         factionID="0" factionName="" securityStatus="3.5" damageDone="29" finalBlow="0"
+                         weaponTypeID="12017" shipTypeID="12017"/>
+                </rowset>
+                <rowset name="items" columns="typeID,flag,qtyDropped,qtyDestroyed">
+                    <row typeID="1978" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="2032" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="2048" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="4292" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="5955" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="10998" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="11269" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="11370" flag="5" qtyDropped="0" qtyDestroyed="2"/>
+                    <row typeID="11644" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="11644" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="11648" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="14070" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="14236" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="15466" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="17682" flag="5" qtyDropped="0" qtyDestroyed="3"/>
+                    <row typeID="17684" flag="5" qtyDropped="0" qtyDestroyed="3"/>
+                    <row typeID="17686" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="17686" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="17686" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="17686" flag="5" qtyDropped="0" qtyDestroyed="3"/>
+                    <row typeID="17688" flag="5" qtyDropped="0" qtyDestroyed="3"/>
+                    <row typeID="17690" flag="5" qtyDropped="0" qtyDestroyed="3"/>
+                    <row typeID="17692" flag="5" qtyDropped="0" qtyDestroyed="3"/>
+                    <row typeID="20032" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="20701" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="20841" flag="5" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="20845" flag="5" qtyDropped="0" qtyDestroyed="2"/>
+                    <row typeID="25954" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="25954" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="26388" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="29001" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="29001" flag="0" qtyDropped="0" qtyDestroyed="1"/>
+                    <row typeID="1978" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="1978" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="3534" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="3559" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="3559" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="3559" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="11648" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="14146" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="15965" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="20845" flag="5" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="29001" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="29011" flag="0" qtyDropped="1" qtyDestroyed="0"/>
+                    <row typeID="20032" flag="5" qtyDropped="2" qtyDestroyed="0"/>
+                    <row typeID="20841" flag="5" qtyDropped="2" qtyDestroyed="0"/>
+                    <row typeID="20847" flag="5" qtyDropped="2" qtyDestroyed="0"/>
+                    <row typeID="2032" flag="5" qtyDropped="3" qtyDestroyed="0"/>
+                    <row typeID="15810" flag="5" qtyDropped="3" qtyDestroyed="0"/>
+                    <row typeID="17680" flag="5" qtyDropped="3" qtyDestroyed="0"/>
+                    <row typeID="17694" flag="5" qtyDropped="3" qtyDestroyed="0"/>
+                    <row typeID="28999" flag="5" qtyDropped="3" qtyDestroyed="0"/>
+                    <row typeID="10998" flag="5" qtyDropped="5" qtyDestroyed="0"/>
+                    <row typeID="15477" flag="5" qtyDropped="5" qtyDestroyed="0"/>
+                    <row typeID="15478" flag="5" qtyDropped="5" qtyDestroyed="0"/>
+                    <row typeID="16275" flag="0" qtyDropped="2166" qtyDestroyed="0"/>
+                </rowset>
+            </row>
+        </rowset>
+    </result>
+    <cachedUntil>2013-03-18 20:21:22</cachedUntil>
+</eveapi>

@@ -1,12 +1,11 @@
 package com.eveintel.killmail
 
 import org.scalatest.matchers.MustMatchers
-import org.scalatest.{FunSuite, WordSpec}
+import org.scalatest.WordSpec
 
-class XmlConversionsSpec extends FunSuite with WordSpec with MustMatchers{
+class XmlConversionsSpec extends WordSpec with MustMatchers{
 
-  val edkMail1 = """
-                   |<?xml version="1.0" encoding="UTF-8"?>
+  val edkMail1 = """|<?xml version="1.0" encoding="UTF-8"?>
                    |<eveapi edkapi="1.03" version="2">
                    |  <currentTime>2013-03-18 15:42:19</currentTime>
                    |  <result>
@@ -34,8 +33,15 @@ class XmlConversionsSpec extends FunSuite with WordSpec with MustMatchers{
                    |</eveapi>
                    |""".stripMargin
 
+  val ks = Seq(KillSource(false, None, None, None, 0, 0))
+
   "xml loading" should {
     "load an EDK derived mail" in {
+      XmlConversions.fromXml(edkMail1, ks)
+    }
+
+    "load an EDK derived mail from a file" in {
+      XmlConversions.fromXml(getClass.getResource("/test1.xml"), ks)
 
     }
   }
