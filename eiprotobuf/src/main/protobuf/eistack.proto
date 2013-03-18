@@ -2,6 +2,10 @@ package eistack;
 
 option java_package = "com.eveintel.protobuf";
 
+message Killmails {
+    repeated Killmails killmails = 1;
+}
+
 message Killmail {
     optional uint64 ccpId = 1;
     required uint64 solarSystemId = 2;
