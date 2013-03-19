@@ -38,6 +38,7 @@ case class Participant(characterId: Option[Long],
                        factionId: Option[Long],
                        factionName: Option[String],
                        damageTaken: Option[Int],
+                       damageDone: Option[Int],
                        securityStatus: Option[Double],
                        finalBlow: Option[Boolean],
                        weaponTypeId: Option[Long])

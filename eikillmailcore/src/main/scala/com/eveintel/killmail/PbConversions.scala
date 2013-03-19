@@ -45,6 +45,7 @@ object KillmailImplicitConverters {
       p.hasFactionId match { case true => Some(p.getFactionId) case false => None },
       p.hasFactionName match { case true => Some(p.getFactionName) case false => None },
       p.hasDamageTaken match { case true => Some(p.getDamageTaken) case false => None },
+      p.hasDamageDone match { case true => Some(p.getDamageDone) case false => None },
       p.hasSecurityStatus match { case true => Some(p.getSecurityStatus) case false => None },
       p.hasFinalBlow match { case true => Some(p.getFinalBlow) case false => None },
       p.hasWeaponTypeId match { case true => Some(p.getWeaponTypeId) case false => None }
@@ -113,6 +114,7 @@ object KillmailImplicitConverters {
     pa.factionId.ifDefined { builder.setFactionId(_) }
     pa.factionName.ifDefined { builder.setFactionName(_) }
     pa.damageTaken.ifDefined { builder.setDamageTaken(_) }
+    pa.damageDone.ifDefined { builder.setDamageDone(_) }
     pa.securityStatus.ifDefined { builder.setSecurityStatus(_) }
     pa.finalBlow.ifDefined { builder.setFinalBlow(_) }
     pa.weaponTypeId.ifDefined { builder.setWeaponTypeId(_) }

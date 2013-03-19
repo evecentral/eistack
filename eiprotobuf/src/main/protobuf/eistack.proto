@@ -24,9 +24,10 @@ message Killmail {
         optional uint64 factionId = 8;
         optional string factionName = 9;
         optional int32 damageTaken = 10;
-        optional double securityStatus = 11;
-        optional bool finalBlow = 12;
-        optional uint64 weaponTypeId = 13;
+        optional int32 damageDone = 11;
+        optional double securityStatus = 12;
+        optional bool finalBlow = 13;
+        optional uint64 weaponTypeId = 14;
     }
 
     required Participant victim = 6;

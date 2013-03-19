@@ -33,15 +33,33 @@ class XmlConversionsSpec extends WordSpec with MustMatchers{
                    |</eveapi>
                    |""".stripMargin
 
-  val ks = Seq(KillSource(false, None, None, None, 0, 0))
+  val ks = KillSource(false, None, None, None, 0, 0)
 
   "xml loading" should {
     "load an EDK derived mail" in {
-      XmlConversions.fromXml(edkMail1, ks)
+      val kmAll = XmlConversions(edkMail1, ks)
+      val km = kmAll.head
+      val km2 = kmAll.tail.head
+
+      kmAll must have size(2)
+      km.ccpId must equal(0)
+      km.victim.allianceId.get must equal (173739862)
+      km.victim.allianceName.get must equal ("Veritas Immortalis")
+      km.victim.characterName.get must equal ("Verwoester")
+      km.victim.characterId.get must equal (482310896)
+      km.victim.shipTypeId.get must equal (670)
+      km.victim.corporationName.get must equal ("The African Contingency")
+      km.victim.corporationId.get must equal (360870066)
+      km.victim.damageTaken.get must equal (0)
+      km.attackers must have size(1)
+
+      km2.attackers must have size(6)
     }
 
     "load an EDK derived mail from a file" in {
-      XmlConversions.fromXml(getClass.getResource("/test1.xml"), ks)
+      val mails = XmlConversions(getClass.getResource("/test1.xml"), ks)
+
+      mails must have size(3)
 
     }
   }
