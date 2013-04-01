@@ -3,7 +3,7 @@ package com.eveintel.ingest
 import akka.actor.{Actor, Props}
 import spray.routing.HttpService
 import spray.can.server.SprayCanHttpServerApp
-import com.eveintel.killmail.{BoardType, KillSource, XmlConversions}
+import com.eveintel.killmail.{KillHashing, BoardType, KillSource, XmlConversions}
 import com.eveintel.protobuf.Eistack.Killmails
 import scala.collection.JavaConversions._
 
@@ -20,7 +20,8 @@ trait IngestService extends HttpService {
       path("convert") {
         formFields('xml, 'source) { case (contents: String, source: String) =>
           val kmsource = KillSource(false, boardType = Some(BoardType.EDK), boardUrl = Some(source))
-          val converted = Killmails.newBuilder().addAllKillmails(XmlConversions(contents, kmsource).map(_.build))
+          val kms = XmlConversions(contents, kmsource).map(KillHashing(_)).map(_.build)
+          val converted = Killmails.newBuilder().addAllKillmails(kms)
           complete(converted.build().toByteArray)
         }
       }
