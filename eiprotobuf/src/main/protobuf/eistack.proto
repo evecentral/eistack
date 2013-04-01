@@ -3,7 +3,7 @@ package eistack;
 option java_package = "com.eveintel.protobuf";
 
 message Killmails {
-    repeated Killmails killmails = 1;
+    repeated Killmail killmails = 1;
 }
 
 message Killmail {

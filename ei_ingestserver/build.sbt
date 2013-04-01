@@ -1,8 +1,12 @@
 organization  := "com.eveintel"
 
-name := "eikillmailcore"
+name := "eiingestserver"
 
 version := "1.0.0-SNAPSHOT"
+
+resolvers += "spray repo" at "http://repo.spray.io"
+
+resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
 
 libraryDependencies += "joda-time" % "joda-time" % "2.1"
 
@@ -14,3 +18,9 @@ libraryDependencies += "com.google.guava" % "guava" % "14.0"
 
 libraryDependencies += "com.google.code.findbugs" % "jsr305" % "2.0.1"
 
+libraryDependencies += "io.spray" % "spray-can" % "1.1-M7"
+
+libraryDependencies += "io.spray" % "spray-routing" % "1.1-M7"
+
+libraryDependencies +=
+  "com.typesafe.akka" %% "akka-actor" % "2.1.2"

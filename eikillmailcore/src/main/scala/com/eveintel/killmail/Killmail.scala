@@ -43,12 +43,12 @@ case class Participant(characterId: Option[Long],
                        finalBlow: Option[Boolean],
                        weaponTypeId: Option[Long])
 
-case class KillSource(directApi: Boolean,
-                      boardType: Option[BoardType.BoardType],
-                      boardUrl: Option[String],
-                      edkInternalId: Option[Long],
-                      levelsOfIndirection: Int,
-                      tombstone: Int)
+case class KillSource(directApi: Boolean = false,
+                      boardType: Option[BoardType.BoardType] = None,
+                      boardUrl: Option[String] = None,
+                      edkInternalId: Option[Long] = None,
+                      levelsOfIndirection: Int = 0,
+                      tombstone: Int = 0)
 
 case class Killmail(ccpId: Long, solarSystemId: Long,
                     killTime: DateTime,
