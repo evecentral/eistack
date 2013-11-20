@@ -1,8 +1,8 @@
 import sbtprotobuf.{ProtobufPlugin=>PB}
 
-unmanagedResourceDirectories in Compile <+= (sourceDirectory in PB.protobufConfig).identity
+seq(PB.protobufSettings: _*)
 
-PB.protobufSettings
+unmanagedResourceDirectories in Compile <+= (sourceDirectory in PB.protobufConfig)
 
 version in PB.protobufConfig := "2.5.0"
 

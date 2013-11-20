@@ -18,11 +18,9 @@ libraryDependencies += "com.google.guava" % "guava" % "14.0"
 
 libraryDependencies += "com.google.code.findbugs" % "jsr305" % "2.0.1"
 
-libraryDependencies += "io.spray" % "spray-can" % "1.1-M7"
-
-libraryDependencies += "io.spray" % "spray-routing" % "1.1-M7"
 
 libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.1.2"
 
-libraryDependencies += "org.apache.cassandra" % "cassandra-thrift" % "1.2.4"
+libraryDependencies += "org.xerial" % "sqlite-jdbc" % "3.7.2"
+
 
