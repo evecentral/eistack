@@ -15,7 +15,7 @@ def frame_received(frame):
   logging.info(mid)
   body = frame.body
   db = sqlite3.connect("stomp-records.sqlite")
-  db.execute("INSERT INTO input_kills (timestamp, messageid, json) VALUES ('now', ?, ?)", (mid, body))
+  db.execute("INSERT INTO input_kills (timestamp, messageid, json) VALUES (datetime('now'), ?, ?)", (mid, body))
   db.commit()
   db.close()
   logging.info("Inserted")
