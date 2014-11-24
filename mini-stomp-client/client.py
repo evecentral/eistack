@@ -8,14 +8,15 @@ from stompclient import PublishSubscribeClient
 
 logging.basicConfig(level=logging.INFO)
 
-db = sqlite3.connect("stomp-records.sqlite")
+
 
 def frame_received(frame):
   mid = frame.headers["message-id"]
   logging.info(mid)
   body = frame.body
-
-  db.execute("INSERT INTO input_kills (timestamp, messageid, json) VALUES (NOW(), ?, ?)", (mid, body))
+  db = sqlite3.connect("stomp-records.sqlite")
+  db.execute("INSERT INTO input_kills (timestamp, messageid, json) VALUES ('now', ?, ?)", (mid, body))
+  db.close()
   logging.info("Inserted")
 
 logging.info("Starting")
