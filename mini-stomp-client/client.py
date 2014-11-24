@@ -2,15 +2,24 @@ import time
 import sys
 import logging
 import threading
-logging.basicConfig(level=logging.DEBUG)
+import sqlite3
 
 from stompclient import PublishSubscribeClient
 
-def frame_received(frame):
-    # Do something with the frame!
-    print "----Received Frame----\n%s\n-----" % frame
+logging.basicConfig(level=logging.INFO)
 
-client = PublishSubscribeClient('82.221.99.197', 61613)
+db = sqlite3.connect("stomp-records.sqlite")
+
+def frame_received(frame):
+  mid = frame.headers["message-id"]
+  logging.info(mid)
+  body = frame.body
+
+  db.execute("INSERT INTO input_kills (timestamp, messageid, json) VALUES (NOW(), ?, ?)", (mid, body))
+  logging.info("Inserted")
+
+logging.info("Starting")
+client = PublishSubscribeClient('eve-kill.net', 61613)
 listener = threading.Thread(target=client.listen_forever)
 listener.start()
 
@@ -19,4 +28,5 @@ client.listening_event.wait()
 
 client.connect('guest', 'guest')
 client.subscribe("/topic/kills", frame_received)
-time.sleep(200000)
+while True:
+  time.sleep(200)
